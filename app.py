@@ -62,7 +62,7 @@ class Message(db.Model):
     return doc_dict
 
   def __repr__(self):
-    return "%s. v. %s. lang: %s" % (self.title, self.version, self.language)
+    return "%s to %s at %s" % (self.sender, self.receiver, self.phone)
 
 
 # -------------------
