@@ -97,7 +97,11 @@ def love():
   if request.method != 'POST':
     return render_template('love.html')
   else:
-    return Message.query.filter_by(password=request.form['password']).first().text
+    m = Message.query.filter_by(password=request.form['password']).first()
+    if m:
+      return m.text
+    else:
+      return 'No message for that password :( </3'
 
 if __name__ == "__main__":
   app.run()
