@@ -92,5 +92,12 @@ def message():
   else:
     return 'un mensaje'
 
+@app.route('/love', methods=['GET', 'POST'])
+def love():
+  if request.method != 'POST':
+    return render_template('love.html')
+  else:
+    return Message.query.filter_by(password=request.form['password']).first().text
+
 if __name__ == "__main__":
   app.run()
