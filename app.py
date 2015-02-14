@@ -99,9 +99,9 @@ def love():
   else:
     m = Message.query.filter_by(password=request.form['password']).first()
     if m:
-      return m.text
+      return render_template('love.html', message=m.text)
     else:
-      return 'No message for that password :( </3'
+      return render_template('love.html', message='No message for that password :( </3')
 
 if __name__ == "__main__":
   app.run()
