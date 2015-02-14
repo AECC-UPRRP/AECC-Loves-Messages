@@ -29,5 +29,10 @@
 .left h1, p, h3{
 
 	font-family: open sans;
-	color: gray; 
+	color: white; 
+	text-align: center; 
+}
+
+.form-inline {
+	text-align: center; 
 }

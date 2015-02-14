@@ -1,10 +1,16 @@
 {% extends "layout.html" %}
 
 {% block content %}
-Give me a password:
+<h1 align="center" style="color:white;">If you're here is because someone sent you a secret message!!</h1>
+<hr>
+<h3 align="center">Enter the password you received to see it!!</h3>
 
-<form action='/love' method='post'>
-  <input type='text' name='password'>
-  <input type='submit' value='Get your message ;)'>
+<form class='form-inline' align="center" action='/love' method='post'>
+	<div class="form-group">
+  		<input type='text' class="form-control" name='password'>
+  	</div>
+  	<div class="form-group">
+  		<input type='submit' class="btn btn-default"  value='Get your message ;)'>
+  	</div>
 </form>
-{% endblock content %}
+{% endblock content %}s
